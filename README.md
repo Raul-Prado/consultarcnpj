@@ -32,4 +32,4 @@ A escolha de não utilizar frameworks e focar em CSS puro e Flexbox permitiu uma
 ## Instruções para Rodar
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/seurepositorio.git
+   git clone [https://github.com/seuusuario/seurepositorio.git](https://github.com/Raul-Prado/consultarcnpj.git)
