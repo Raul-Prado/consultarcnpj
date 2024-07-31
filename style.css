@@ -138,6 +138,24 @@ section div.banner-container img{
     position: relative;
     z-index: 1;
 }
+section div.banner-container{
+    background-image: url("/banner-para-site-de-pesquisa-cnpj.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+@media (max-width:700px){
+    section div.banner-container{
+        background-image: url("/banner-responsivo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 100%;
+    }
+}
 /* principal */
 div.container {
     display: flex;
@@ -146,37 +164,30 @@ div.container {
     margin: 20px;
     gap: 20px;
 }
-
 div.container div.container-text {
-    flex: 1 1 45%;
+    /* flex: 1 1 45%; */
     max-width: 45%;
 }
-
 div.container div.container-text h1 {
     font-size: 2rem;
     color: var(--blue);
 }
-
 div.container div.container-text p {
     font-size: 1.2rem;
     color: var(--black);
 }
-
 hr {
     width: 35%;
     height: 5px;
     border: none;
     background-color: var(--blue);
 }
-
 div.container div.container-form {
-    flex: 1 1 45%;
-    max-width: 45%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 div.container div.container-form form {
     width: 100%;
     padding: 20px;
@@ -187,13 +198,11 @@ div.container div.container-form form {
     flex-direction: column;
     gap: 10px;
 }
-
 div.container div.container-form form label {
     font-size: 1rem;
     color: var(--blue);
     font-weight: bold;
 }
-
 div.container div.container-form form input {
     width: 100%;
     padding: 10px;
@@ -201,7 +210,6 @@ div.container div.container-form form input {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
 div.container div.container-form form button {
     padding: 10px;
     background-color: var(--blue);
@@ -211,57 +219,66 @@ div.container div.container-form form button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 div.container div.container-form form button:hover {
     background-color: green;
     transform: scale(1.05);
 }
-
-div.container-data {
-    margin: 20px;
+@media (max-width:768px) {
+    div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.container div.container-text {
+        flex: 1 1 45%;
+        max-width: 100%;
+    }
+    div.container div.container-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-div.container-data h2 {
+/* dados da empresa */
+.container-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-table > div {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.container-data {
+    /* margin-right: 10px; */
+}
+.container-data h2{
     color: var(--blue);
 }
-
-div.container-data ul {
+div.cards {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
-div.container-data ul li {
+div.cards {
     margin-bottom: 10px;
 }
-
-div.container-data ul li input {
-    width: calc(50% - 130px);
-    padding: 5px;
-    margin-left: 10px;
-    border: 1px solid var(--blue);
-    border-radius: 5px;
-    display: block;
+div.cards label, .container-data label{
+    margin-right: 30%;
 }
-
-div.cards ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-div.cards ul li {
+div.cards input, .container-data input {
+    width: 70%;
+    padding: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
-}
-
-div.cards ul li input {
-    width: calc(50% - 180px);
-    padding: 5px;
-    margin-left: 10px;
     border: 1px solid var(--blue);
     border-radius: 5px;
+    box-sizing: border-box;
 }
-
+.container-sub H2{
+    color: var(--blue);
+}
 button#btn-submit {
     padding: 10px 20px;
     background-color: var(--blue);
@@ -271,30 +288,32 @@ button#btn-submit {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 button#btn-submit:hover {
     background-color: green;
     transform: scale(1.05);
 }
 @media (max-width: 768px) {
-    div.container {
+    div.container-table {
         flex-direction: column;
         align-items: center;
     }
-
-    div.container div.container-text, 
-    div.container div.container-form {
-        flex: 1 1 100%;
-        max-width: 100%;
+    div.cards label, .container-data label{
+        margin-right: 0%;
     }
-
-    div.container div.container-form form {
-        width: 90%;
+    div.cards input, .container-data input {
+        width: 100%;
     }
-
-    div.container-data ul li input,
-    div.cards ul li input {
-        width: calc(100% - 100px);
+    .container-data h2{
+        color: var(--blue);
+        text-align: center;
+    }
+    div.container-dados{
+        display: flex;
+        flex-direction: column;
+    }
+    div.button-submit {
+        display: flex;
+        justify-content: center;
     }
 }
 /* sobre */
@@ -333,11 +352,9 @@ button#btn-submit:hover {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-
 .about-image img:hover {
     transform: scale(1.05);
 }
-
 @media (max-width: 768px) {
     .about-company {
         flex-direction: column;
@@ -358,7 +375,6 @@ button#btn-submit:hover {
     }
 }
 /* contato */
-/* Newlatter */
 section.newsletter{
     display: flex;
     flex-direction: column;
@@ -451,26 +467,6 @@ div.container-faq details.details-cnpj summary:hover {
     padding: 10px;
     border-radius: 20px;
 }
-/* 
-.details-cnpj summary {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    
-}
-
-.details-cnpj p {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    border-top: 1px solid #ccc;
-} */
 /* footer */
 footer {
     background-color: rgb(15, 15, 56);
@@ -482,7 +478,6 @@ footer {
     width: 100%;
     box-sizing: border-box;
 }
-
 footer p {
     margin-bottom: 20px;
     font-size: 1.3rem;
@@ -511,7 +506,6 @@ footer nav.nav-footer {
     display: flex;
     flex-direction: column;
 }
-
 footer nav.nav-footer ul {
     display: flex;
     flex-direction: column;
@@ -520,19 +514,16 @@ footer nav.nav-footer ul {
     padding: 0;
     margin: 0;
 }
-
 footer nav.nav-footer ul li a {
     color: var(--white);
     text-decoration: none;
 }
-
 footer nav.nav-footer ul li a:hover {
     color: white;
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
 }
-
 @media (max-width: 768px) {
     footer {
         flex-direction: column;

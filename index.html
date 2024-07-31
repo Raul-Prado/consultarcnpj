@@ -26,9 +26,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Consulta o seu CNPJ</title>
 </head>
+
 <body>
     <!-- cabeçalho -->
-    <header>
+    <header id="inicio">
         <div>
             <a href="mailto:">consultaseucnpj.com.br</a>
         </div>
@@ -45,7 +46,7 @@
         </div>
         <ul>
             <li>
-                <a href="http://">Inicio</a>
+                <a href="#inicio">Inicio</a>
             </li>
             <li>
                 <a href="#consultar">Consultar CNPJ</a>
@@ -61,7 +62,6 @@
     <!-- banner -->
     <section>
         <div class="banner-container">
-            <img src="/banner-para-site-de-pesquisa-cnpj.jpg" alt="banner para site de pesquisa cnpj">
         </div>
     </section>
     <!-- principal -->
@@ -83,44 +83,61 @@
             </div>
         </div>
         <!-- tabela -->
-        <div class="container-data">
-            <h2>Dados da Empresa</h2>
-            <ul>
-                <li>
-                    Nome: <input type="text" id="nome">
-                </li>
-                <li>
-                    Razão Social: <input type="text" id="razao-social">
-                </li>
-                <li>
-                    Data de Abertura: <input type="text" id="dt-abertura">
-                </li>
-                <li>
-                    Situação: <input type="text" id="situacao">
-                </li>
-                <li>
-                    Atividade Principal: <input type="text" id="atividade">
-                </li>
-                <li>
-                    Endereço Completo: <input type="text" id="enderenco">
-                </li>
-                <li>
-                    Telefone: <input type="text" id="telefone">
-                </li>
-                <li>
-                    E-mail: <input type="text" id="email">
-                </li>
-            </ul>
-            <h2>Sócios</h2>
-            <div id="socios" class="cards">
-                <ul>
-                    <li>
-                        Nome Sócio: <input type="text" id="nomeSocio">
-                    </li>
-                    <li>
-                        Qualificação Sócio: <input type="text" id="qualiSocio">
-                    </li>
-                </ul>
+        <div class="container-table">
+            <div class="container-data">
+                <h2>Dados da Empresa</h2>
+                <div class="container-dados">
+                    <label for="nomeCnpj">
+                        Nome: <input type="text" id="nome" name="nomeCnpj">
+                    </label><br>
+                    <label for="razaoSocial">
+                        Razão Social: <input type="text" id="razao-social" name="razaoSocial">
+                    </label><br>
+                    <label for="dtAbertura">
+                        Data de Abertura: <input type="text" id="dt-abertura" name="dtAbertura">
+                    </label><br>
+                    <label for="situacaoCnpj">
+                        Situação: <input type="text" id="situacao" name="situacaoCnpj">
+                    </label><br>
+                    <label for="atividadeRamo">
+                        Atividade Principal: <input type="text" id="atividade" name="atividadeRamo">
+                    </label><br>
+                    <label for="endCompleto">
+                        Endereço Completo: <input type="text" id="endereco" name="endCompleto">
+                    </label><br>
+                    <label for="telCnpj">
+                        Telefone: <input type="text" id="telefone" name="telCnpj">
+                    </label><br>
+                    <label for="emailCnpj">
+                        E-mail: <input type="text" id="email" name="emailCnpj">
+                    </label><br>
+                </div>
+                <h2>Sócios</h2>
+                <div id="socios" class="cards">
+                    <label for="nameSocio">
+                        Nome Sócio: <input type="text" id="nomeSocio" name="nameSocio">
+                    </label><br>
+                    <label for="qualiSocio">
+                        Qualificação Sócio: <input type="text" id="qualiSocio" name="qualiSocio">
+                    </label>
+                </div>
+                <div class="button-submit">
+                    <button id="btn-submit">Salvar alteração</button>
+                </div>
+            </div>
+            <div class="container-sub">
+                <h2>Dados Editados</h2>
+                <p><strong>Nome:</strong> <span id="cnpj-nome"></span></p>
+                <p><strong>Razão Social:</strong> <span id="cnpj-razao-social"></span></p>
+                <p><strong>Data de Abertura:</strong> <span id="cnpj-dt-abertura"></span></p>
+                <p><strong>Situação:</strong> <span id="cnpj-situacao"></span></p>
+                <p><strong>Atividade Principal:</strong> <span id="cnpj-atividade"></span></p>
+                <p><strong>Endereço Completo:</strong> <span id="cnpj-endereco"></span></p>
+                <p><strong>Telefone:</strong> <span id="cnpj-telefone"></span></p>
+                <p><strong>E-mail:</strong> <span id="cnpj-email"></span></p>
+                <h2>Sócios</h2>
+                <p><strong>Nome Sócio:</strong> <span id="cnpj-nome-socio"></span></p>
+                <p><strong>Qualificação Sócio:</strong> <span id="cnpj-quali-socio"></span></p>
             </div>
         </div>
         <!-- sobre -->
@@ -177,9 +194,10 @@
         <nav class="nav-footer">
             <p>Menu</p>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#consultar">Consultar CNPJ</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         <div class="company-info">
@@ -202,8 +220,8 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
-    <script src="js/menu.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./menu.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
