@@ -139,7 +139,7 @@ section div.banner-container img{
     z-index: 1;
 }
 section div.banner-container{
-    background-image: url("/banner-para-site-de-pesquisa-cnpj.jpg");
+    background-image: url("banner-para-site-de-pesquisa-cnpj.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@ section div.banner-container{
 }
 @media (max-width:700px){
     section div.banner-container{
-        background-image: url("/banner-responsivo.jpg");
+        background-image: url("banner-responsivo.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
